@@ -48,10 +48,11 @@ class SettingsScreen extends StatelessWidget {
               context: context,
               currentValue: context.locale,
               items: supportedLanguages,
-              onChanged: (value) {
+              onChanged: (value) async {
                 final Locale language = value;
-                context.setLocale(language);
-                context.pop();
+                await context
+                    .setLocale(language)
+                    .then((value) => context.pop());
               });
         },
       )

@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../utils/constants.dart';
 
@@ -71,27 +70,27 @@ extension AppScreenExtension on SCREENS {
   String get toTitle {
     switch (this) {
       case SCREENS.dashboard:
-        return "screens.dashboard.title".tr();
+        return "screens.dashboard.title";
       case SCREENS.formBuilder:
-        return "screens.formBuilder.title".tr();
+        return "screens.formBuilder.title";
       case SCREENS.formBuilderTextField:
-        return "screens.formBuilder.children.textField.title".tr();
+        return "screens.formBuilder.children.textField.title";
       case SCREENS.profile:
-        return "screens.profile.title".tr();
+        return "screens.profile.title";
       case SCREENS.settings:
-        return "screens.settings.title".tr();
+        return "screens.settings.title";
       case SCREENS.login:
-        return "screens.login.title".tr();
+        return "screens.login.title";
       case SCREENS.logout:
-        return "screens.logout.title".tr();
+        return "screens.logout.title";
       case SCREENS.splash:
-        return "screens.splash.title".tr();
+        return "screens.splash.title";
       case SCREENS.error:
-        return "screens.error.title".tr();
+        return "screens.error.title";
       case SCREENS.onBoarding:
-        return "screens.onBoarding.title".tr();
+        return "screens.onBoarding.title";
       default:
-        return "screens.dashboard.title".tr();
+        return "screens.dashboard.title";
     }
   }
 

@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -37,14 +36,11 @@ class DrawerWidget extends StatelessWidget {
                     itemCount: screens.length,
                     itemBuilder: (context, index) {
                       final IconData icon = screens[index].toIcon;
-                      final String title = context.locale.toString() != ''
-                          ? screens[index].toTitle
-                          : '';
                       final String pathName = screens[index].toName;
                       return DrawerListTileWidget(
                           index: index,
                           icon: icon,
-                          title: title,
+                          title: screens[index].toTitle,
                           onTap: () {
                             // Close Drawer (Mobile & Tablet)
                             if (!ResponsiveLayout.isDesktop(context)) {
@@ -61,16 +57,10 @@ class DrawerWidget extends StatelessWidget {
             ],
           ),
         ),
-        // DrawerListTileWidget(
-        //     icon: loginScreen.toIcon,
-        //     title: loginScreen.toTitle,
-        //     onTap: () => context.read<AuthService>().logOut()),
-        Builder(
-            builder: (context) => DrawerListTileWidget(
-                icon: loginScreen.toIcon,
-                title:
-                    context.locale.toString() != '' ? loginScreen.toTitle : '',
-                onTap: () => context.read<AuthService>().logOut()))
+        DrawerListTileWidget(
+            icon: loginScreen.toIcon,
+            title: loginScreen.toTitle,
+            onTap: () => context.read<AuthService>().logOut()),
       ],
     ));
   }

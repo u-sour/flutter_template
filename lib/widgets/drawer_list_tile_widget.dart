@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/route_service.dart';
@@ -23,7 +24,7 @@ class DrawerListTileWidget extends StatelessWidget {
       return ListTile(
           selected: selected,
           leading: Icon(icon),
-          title: Text(title),
+          title: Text(context.tr(title)),
           onTap: onTap);
     });
   }

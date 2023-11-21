@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../models/widgets/screen_list_tile_widget_model.dart';
@@ -15,7 +16,7 @@ class FormBuilderScreen extends StatelessWidget {
     List<ScreenListTileWidgetModel> models = [
       ScreenListTileWidgetModel(
         icon: SCREENS.formBuilderTextField.toIcon,
-        title: SCREENS.formBuilderTextField.toTitle,
+        title: context.tr(SCREENS.formBuilderTextField.toTitle),
         onTap: () => context.goNamed(SCREENS.formBuilderTextField.toName),
       )
     ];

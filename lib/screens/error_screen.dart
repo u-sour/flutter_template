@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../router/route_utils.dart';
+import '../widgets/app_bar_widget.dart';
 
 class ErrorScreen extends StatelessWidget {
   final String? error;
@@ -12,9 +13,7 @@ class ErrorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(SCREENS.error.toTitle),
-      ),
+      appBar: AppBarWidget(title: SCREENS.error.toTitle),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

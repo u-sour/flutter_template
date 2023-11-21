@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-// widgets
 import '../utils/responsive/responsive_layout.dart';
 import '../widgets/bottom_nav_bar_widget.dart';
 import '../widgets/drawer_widget.dart';

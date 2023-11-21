@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../router/route_utils.dart';
 import '../services/app_service.dart';
+import '../widgets/app_bar_widget.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -11,9 +11,7 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final appService = Provider.of<AppService>(context);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(SCREENS.onBoarding.toTitle),
-      ),
+      appBar: AppBarWidget(title: SCREENS.onBoarding.toTitle),
       body: Center(
         child: TextButton(
           onPressed: () {

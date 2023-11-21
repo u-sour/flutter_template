@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -36,7 +37,7 @@ class _BottonNavBarWidgetState extends State<BottonNavBarWidget> {
     for (int i = 0; i < screens.length; i++) {
       final IconData icon = screens[i].toIcon;
       final String title = screens[i].toTitle;
-      tabs.add(GButton(icon: icon, text: title));
+      tabs.add(GButton(icon: icon, text: context.tr(title)));
     }
     return Container(
       color: theme.bottomNavigationBarTheme.backgroundColor,

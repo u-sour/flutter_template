@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../router/route_utils.dart';
+import '../widgets/app_bar_widget.dart';
 import '../services/app_service.dart';
+import '../router/route_utils.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -28,9 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(SCREENS.splash.toTitle),
-      ),
+      appBar: AppBarWidget(title: SCREENS.splash.toTitle),
       body: const Center(
         child: CircularProgressIndicator(),
       ),
