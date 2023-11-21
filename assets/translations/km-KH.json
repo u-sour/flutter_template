@@ -1,0 +1,54 @@
+{
+    "screens":{
+        "splash": {
+            "title": "SPLASH"
+        },
+        "onBoarding" : {
+            "title": "សូមស្វាគមន៍"
+        },
+        "login": {
+            "title": "ចូល",
+            "form": {}
+        },
+        "dashboard": {
+            "title": "ផ្ទាំងគ្រប់គ្រង"
+        },
+        "formBuilder": {
+            "title": "បង្កើតទម្រង់បែបបទ",
+            "children": {
+                "textField": {"title": "ប្រអប់អក្សរ"}
+            }
+        },
+        "profile": {
+            "title": "ប្រូហ្វាលរបស់ខ្ញុំ",
+            "form": {}
+        },
+        "settings": {
+            "title": "ការកំណត់ផ្សេងៗ",
+            "form": {},
+            "children":{
+                "language": {
+                    "title": "ភាសា",
+                    "options":{
+                        "en": "អង់គ្លេស",
+                        "km": "ខ្មែរ"
+                    }
+                },
+                "theme": {
+                    "title": "ផ្ទៃ",
+                    "options":{
+                        "auto": "ស្វ័យប្រវត្តិ",
+                        "light": "ពន្លឺ",
+                        "dark": "ងងឹត"
+                    }
+                }
+            }
+        },
+        "404": {
+            "title": "៤០៤ មិនបានរកឃើញ"
+        }, 
+        "logout": {
+            "title": "ចាកចេញ"
+        }  
+    }
+}

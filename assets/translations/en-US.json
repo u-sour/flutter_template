@@ -1,0 +1,54 @@
+{
+    "screens":{
+        "splash": {
+            "title": "SPLASH"
+        },
+        "onBoarding" : {
+            "title": "WELCOME"
+        },
+        "login": {
+            "title": "LOG IN",
+            "form": {}
+        },
+        "dashboard": {
+            "title": "DASHBOARD"
+        },
+        "formBuilder": {
+            "title": "FORM BUILDER",
+            "children": {
+                "textField": {"title": "Text Field"}
+            }
+        },
+        "profile": {
+            "title": "PROFILE",
+            "form": {}
+        },
+        "settings": {
+            "title": "SETTINGS",
+            "form": {},
+            "children":{
+                "language": {
+                    "title": "Language",
+                    "options":{
+                        "en": "English",
+                        "km": "Khmer"
+                    }
+                },
+                "theme": {
+                    "title": "Theme",
+                    "options":{
+                        "auto": "Auto",
+                        "light": "Light",
+                        "dark": "Dark"
+                    }
+                }
+            }
+        },
+        "error": {
+            "title": "ERROR"
+        }, 
+        "logout": {
+            "title": "LOG OUT"
+        }  
+    }
+}
