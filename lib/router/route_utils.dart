@@ -7,7 +7,8 @@ enum SCREENS {
   login,
   dashboard,
   formBuilder,
-  formBuilderTextField,
+  formBuilderDefault,
+  formBuilderValidation,
   profile,
   settings,
   logout,
@@ -21,8 +22,10 @@ extension AppScreenExtension on SCREENS {
         return "/";
       case SCREENS.formBuilder:
         return "/form-builder";
-      case SCREENS.formBuilderTextField:
-        return "text-field";
+      case SCREENS.formBuilderDefault:
+        return "form-builder-default";
+      case SCREENS.formBuilderValidation:
+        return "form-builder-validation";
       case SCREENS.profile:
         return "/profile";
       case SCREENS.settings:
@@ -48,8 +51,10 @@ extension AppScreenExtension on SCREENS {
         return "dashboard";
       case SCREENS.formBuilder:
         return "formBuilder";
-      case SCREENS.formBuilderTextField:
-        return "formBuilderTextField";
+      case SCREENS.formBuilderDefault:
+        return "formBuilderDefault";
+      case SCREENS.formBuilderValidation:
+        return "formBuilderValidation";
       case SCREENS.profile:
         return "profile";
       case SCREENS.settings:
@@ -73,8 +78,10 @@ extension AppScreenExtension on SCREENS {
         return "screens.dashboard.title";
       case SCREENS.formBuilder:
         return "screens.formBuilder.title";
-      case SCREENS.formBuilderTextField:
-        return "screens.formBuilder.children.textField.title";
+      case SCREENS.formBuilderDefault:
+        return "screens.formBuilder.children.default.title";
+      case SCREENS.formBuilderValidation:
+        return "screens.formBuilder.children.validation.title";
       case SCREENS.profile:
         return "screens.profile.title";
       case SCREENS.settings:
@@ -100,8 +107,10 @@ extension AppScreenExtension on SCREENS {
         return AppDefaultIcons.dashboard;
       case SCREENS.formBuilder:
         return AppDefaultIcons.fromBuilder;
-      case SCREENS.formBuilderTextField:
-        return AppDefaultIcons.fromBuilderTextField;
+      case SCREENS.formBuilderDefault:
+        return AppDefaultIcons.fromBuilderDefault;
+      case SCREENS.formBuilderValidation:
+        return AppDefaultIcons.fromBuilderValidation;
       case SCREENS.profile:
         return AppDefaultIcons.profile;
       case SCREENS.settings:

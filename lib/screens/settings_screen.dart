@@ -99,7 +99,7 @@ class SettingsScreen extends StatelessWidget {
       },
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
-          top: Radius.circular(AppStyleDefaultProperties.radius),
+          top: Radius.circular(AppStyleDefaultProperties.r),
         ),
       ),
     );

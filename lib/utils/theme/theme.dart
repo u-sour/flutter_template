@@ -14,8 +14,9 @@ class AppTheme {
       appBarTheme: AppBarThemeWidget.light,
       elevatedButtonTheme: ElevatedThemeWidget.light,
       bottomNavigationBarTheme: BottomNavBarThemeWidget.light,
-      listTileTheme:
-          ListTileThemeData(selectedTileColor: Colors.grey.shade100));
+      listTileTheme: ListTileThemeData(selectedTileColor: Colors.grey.shade100),
+      inputDecorationTheme:
+          const InputDecorationTheme(border: OutlineInputBorder()));
 
   static ThemeData darkTheme = ThemeData(
       brightness: Brightness.dark,

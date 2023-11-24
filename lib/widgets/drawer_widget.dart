@@ -17,7 +17,8 @@ class DrawerWidget extends StatelessWidget {
         .where((screen) =>
             screen.toPath != "/splash" &&
             screen.toPath != "/start" &&
-            screen.toPath != "text-field" &&
+            screen.toPath != "form-builder-default" &&
+            screen.toPath != "form-builder-validation" &&
             screen.toPath != "/login" &&
             screen.toPath != "/logout" &&
             screen.toPath != "/error")

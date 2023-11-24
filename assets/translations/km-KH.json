@@ -16,7 +16,20 @@
         "formBuilder": {
             "title": "បង្កើតទម្រង់បែបបទ",
             "children": {
-                "textField": {"title": "ប្រអប់អក្សរ"}
+                "default": {"title": "លំនាំដើម"},
+                "extra": {"title": "បន្ថែម"},
+                "validation": {
+                    "title": "ការបញ្ជាក់ថាពិតឬត្រឹមត្រូវ",
+                    "form":{
+                        "name":"ឈ្មោះ",
+                        "phoneNumber":"លេខទូរសព្ទ",
+                        "email": "អុីម៉ែល",
+                        "password": "ពាក្យសម្ងាត់",
+                        "confirmPassword": "បញ្ជាក់ពាក្យសម្ងាត់",
+                        "submit": "ដាក់ស្នើ",
+                        "reset": "កំណត់​ឡើង​វិញ"
+                    }
+                }
             }
         },
         "profile": {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/utils/constants.dart';
 
 class ElevatedThemeWidget {
   ElevatedThemeWidget._();
@@ -6,12 +7,14 @@ class ElevatedThemeWidget {
     ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0.0,
+        padding: const EdgeInsets.all(AppStyleDefaultProperties.p),
         shadowColor: Colors.transparent,
       ),
     ),
     ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0.0,
+        padding: const EdgeInsets.all(AppStyleDefaultProperties.p),
         shadowColor: Colors.transparent,
       ),
     ),

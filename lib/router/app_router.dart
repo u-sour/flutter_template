@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../screens/form-builder/form-builder-fields/form_builer_text_field_screen.dart';
 import 'route_utils.dart';
 import '../services/app_service.dart';
 import '../screens/error_screen.dart';
 import '../screens/main_wrapper_screen.dart';
 import '../screens/dashboard_screen.dart';
 import '../screens/form-builder/form_builder_screen.dart';
+import '../screens/form-builder/form-builder-fields/form_builer_default_screen.dart';
+import '../screens/form-builder/form-builder-fields/form_builer_validation_screen.dart';
 import '../screens/profile_screen.dart';
 import '../screens/settings_screen.dart';
 import '../screens/login_screen.dart';
@@ -59,10 +60,16 @@ class AppRouter {
                       builder: (context, state) => const FormBuilderScreen(),
                       routes: [
                         GoRoute(
-                          path: SCREENS.formBuilderTextField.toPath,
-                          name: SCREENS.formBuilderTextField.toName,
+                          path: SCREENS.formBuilderDefault.toPath,
+                          name: SCREENS.formBuilderDefault.toName,
                           builder: (context, state) =>
-                              FormBuilderTextFieldScreen(key: state.pageKey),
+                              FormBuilderDefaultScreen(key: state.pageKey),
+                        ),
+                        GoRoute(
+                          path: SCREENS.formBuilderValidation.toPath,
+                          name: SCREENS.formBuilderValidation.toName,
+                          builder: (context, state) =>
+                              FormBuilderValidationScreen(key: state.pageKey),
                         ),
                       ]),
                 ]),

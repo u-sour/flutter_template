@@ -21,7 +21,18 @@ class AppThemeColors {
 
 class AppStyleDefaultProperties {
   AppStyleDefaultProperties._();
-  static const double radius = 10.0;
+
+  /// r stand for radius
+  static const double r = 10.0;
+
+  /// p stand for padding
+  static const double p = 16.0;
+
+  /// h stand for height
+  static const double h = 16.0;
+
+  /// w stand for width
+  static const double w = 16.0;
 }
 
 class AppDefaultIcons {
@@ -31,7 +42,9 @@ class AppDefaultIcons {
   static const IconData onBoarding = Icons.web;
   static const IconData dashboard = Icons.dashboard;
   static const IconData fromBuilder = Icons.input;
-  static const IconData fromBuilderTextField = Icons.format_color_text;
+  static const IconData fromBuilderDefault = Icons.article;
+  static const IconData fromBuilderExtra = Icons.post_add;
+  static const IconData fromBuilderValidation = Icons.rule;
   static const IconData profile = Icons.face;
   static const IconData settings = Icons.settings;
   static const IconData login = Icons.login;

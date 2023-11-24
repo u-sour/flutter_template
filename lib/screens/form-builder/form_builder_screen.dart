@@ -15,9 +15,14 @@ class FormBuilderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List<ScreenListTileWidgetModel> models = [
       ScreenListTileWidgetModel(
-        icon: SCREENS.formBuilderTextField.toIcon,
-        title: context.tr(SCREENS.formBuilderTextField.toTitle),
-        onTap: () => context.goNamed(SCREENS.formBuilderTextField.toName),
+        icon: SCREENS.formBuilderDefault.toIcon,
+        title: context.tr(SCREENS.formBuilderDefault.toTitle),
+        onTap: () => context.goNamed(SCREENS.formBuilderDefault.toName),
+      ),
+      ScreenListTileWidgetModel(
+        icon: SCREENS.formBuilderValidation.toIcon,
+        title: context.tr(SCREENS.formBuilderValidation.toTitle),
+        onTap: () => context.goNamed(SCREENS.formBuilderValidation.toName),
       )
     ];
     return Scaffold(

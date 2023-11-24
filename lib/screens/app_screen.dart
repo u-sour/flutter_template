@@ -64,9 +64,9 @@ class _AppScreenState extends State<AppScreen> {
           final GoRouter goRouter = context.read<AppRouter>().router;
           return Consumer<ThemeService>(builder: (context, state, child) {
             return MaterialApp.router(
-              localizationsDelegates: context.localizationDelegates,
               supportedLocales: context.supportedLocales,
               locale: context.locale,
+              localizationsDelegates: context.localizationDelegates,
               title: "Flutter Template",
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme,

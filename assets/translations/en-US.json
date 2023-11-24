@@ -16,7 +16,20 @@
         "formBuilder": {
             "title": "FORM BUILDER",
             "children": {
-                "textField": {"title": "Text Field"}
+                "default": {"title": "Default"},
+                "extra": {"title": "Extra"},
+                "validation": {
+                    "title": "Validation", 
+                    "form":{
+                        "name": "Name",
+                        "phoneNumber": "Phone Number",
+                        "email": "Email",
+                        "password": "Password",
+                        "confirmPassword": "Confirm Password",
+                        "submit": "Submit",
+                        "reset": "Reset"
+                    }
+                }
             }
         },
         "profile": {
