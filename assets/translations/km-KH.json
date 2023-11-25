@@ -8,7 +8,15 @@
         },
         "login": {
             "title": "ចូល",
-            "form": {}
+            "children": {
+                "formTitle":"សួស្តី​ សូមស្វាគមន៍ការត្រលប់មកវិញ!",
+                "form": {
+                    "username" : "ឈ្មោះ",
+                    "email" : "អុីម៉ែល",
+                    "password": "ពាក្យសម្ងាត់",
+                    "submit": "ចូល"
+                }
+            }
         },
         "dashboard": {
             "title": "ផ្ទាំងគ្រប់គ្រង"
@@ -33,8 +41,22 @@
             }
         },
         "profile": {
-            "title": "ប្រូហ្វាលរបស់ខ្ញុំ",
-            "form": {}
+            "title": "ប្រូហ្វាល",
+            "children": {
+                "myProfile":{
+                    "title":"ប្រូហ្វាលរបស់ខ្ញុំ",
+                    "formTitle":"ពត៌មាន",
+                    "form":{
+                        "fullName": "ឈ្មោះពេញ",
+                        "gender": "ភេទ",
+                        "phoneNumber": "លេខទូរសព្ទ",
+                        "email": "អុីម៉ែល",
+                        "roles": "តួនាទី",
+                        "submit": "ដាក់ស្នើ",
+                        "cancel": "បោះបង់"
+                    } 
+                }
+            }
         },
         "settings": {
             "title": "ការកំណត់ផ្សេងៗ",

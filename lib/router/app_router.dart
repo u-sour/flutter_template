@@ -6,9 +6,10 @@ import '../screens/error_screen.dart';
 import '../screens/main_wrapper_screen.dart';
 import '../screens/dashboard_screen.dart';
 import '../screens/form-builder/form_builder_screen.dart';
-import '../screens/form-builder/form-builder-fields/form_builer_default_screen.dart';
-import '../screens/form-builder/form-builder-fields/form_builer_validation_screen.dart';
-import '../screens/profile_screen.dart';
+import '../screens/form-builder/children/form_builer_default_screen.dart';
+import '../screens/form-builder/children/form_builer_validation_screen.dart';
+import '../screens/profile/profile_screen.dart';
+import '../screens/profile/children/my_profile_screen.dart';
 import '../screens/settings_screen.dart';
 import '../screens/login_screen.dart';
 import '../screens/onboarding_screen.dart';
@@ -76,10 +77,17 @@ class AppRouter {
             // Profile
             StatefulShellBranch(navigatorKey: _rootNavigatorProfile, routes: [
               GoRoute(
-                path: SCREENS.profile.toPath,
-                name: SCREENS.profile.toName,
-                builder: (context, state) => const ProfileScreen(),
-              ),
+                  path: SCREENS.profile.toPath,
+                  name: SCREENS.profile.toName,
+                  builder: (context, state) => const ProfileScreen(),
+                  routes: [
+                    GoRoute(
+                      path: SCREENS.myProfile.toPath,
+                      name: SCREENS.myProfile.toName,
+                      builder: (context, state) =>
+                          MyProfileScreen(key: state.pageKey),
+                    ),
+                  ]),
             ]),
             // Settings
             StatefulShellBranch(navigatorKey: _rootNavigatorSettings, routes: [

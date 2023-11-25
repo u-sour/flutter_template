@@ -27,6 +27,7 @@ class _BottonNavBarWidgetState extends State<BottonNavBarWidget> {
         .where((screen) =>
             screen.toPath != "/splash" &&
             screen.toPath != "/start" &&
+            screen.toPath != "my-profile" &&
             screen.toPath != "form-builder-default" &&
             screen.toPath != "form-builder-validation" &&
             screen.toPath != "/login" &&

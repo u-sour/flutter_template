@@ -10,6 +10,7 @@ enum SCREENS {
   formBuilderDefault,
   formBuilderValidation,
   profile,
+  myProfile,
   settings,
   logout,
   error
@@ -28,6 +29,8 @@ extension AppScreenExtension on SCREENS {
         return "form-builder-validation";
       case SCREENS.profile:
         return "/profile";
+      case SCREENS.myProfile:
+        return "my-profile";
       case SCREENS.settings:
         return "/settings";
       case SCREENS.login:
@@ -57,6 +60,8 @@ extension AppScreenExtension on SCREENS {
         return "formBuilderValidation";
       case SCREENS.profile:
         return "profile";
+      case SCREENS.myProfile:
+        return "myProfile";
       case SCREENS.settings:
         return "settings";
       case SCREENS.login:
@@ -84,6 +89,8 @@ extension AppScreenExtension on SCREENS {
         return "screens.formBuilder.children.validation.title";
       case SCREENS.profile:
         return "screens.profile.title";
+      case SCREENS.myProfile:
+        return "screens.profile.children.myProfile.title";
       case SCREENS.settings:
         return "screens.settings.title";
       case SCREENS.login:
@@ -112,6 +119,8 @@ extension AppScreenExtension on SCREENS {
       case SCREENS.formBuilderValidation:
         return AppDefaultIcons.fromBuilderValidation;
       case SCREENS.profile:
+        return AppDefaultIcons.profile;
+      case SCREENS.myProfile:
         return AppDefaultIcons.profile;
       case SCREENS.settings:
         return AppDefaultIcons.settings;
