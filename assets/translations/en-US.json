@@ -8,7 +8,15 @@
         },
         "login": {
             "title": "LOG IN",
-            "form": {}
+            "children": {
+                "formTitle":"Hello, Welcome Back!",
+                "form": {
+                    "username" : "Username",
+                    "email" : "Email",
+                    "password": "Password",
+                    "submit": "LOG IN"
+                }
+            }
         },
         "dashboard": {
             "title": "DASHBOARD"
@@ -34,7 +42,26 @@
         },
         "profile": {
             "title": "PROFILE",
-            "form": {}
+            "children": {
+                "myProfile":{
+                    "title":"My Profile",
+                    "formTitle":"Information",
+                    "form":{
+                        "fullName": "Full Name",
+                        "gender": "Gender",
+                        "phoneNumber": "Phone Number",
+                        "email": "Email",
+                        "roles": "Roles",
+                        "submit": "Submit",
+                        "cancel": "Cancel"
+                    } 
+                },
+                "security":{
+                    "title":"Security",
+                    "form":{
+                    }
+                }
+            }
         },
         "settings": {
             "title": "SETTINGS",

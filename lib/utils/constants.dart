@@ -28,6 +28,9 @@ class AppStyleDefaultProperties {
   /// p stand for padding
   static const double p = 16.0;
 
+  /// bp stand for buttom padding
+  static const double bp = 32.0;
+
   /// h stand for height
   static const double h = 16.0;
 
@@ -37,6 +40,10 @@ class AppStyleDefaultProperties {
 
 class AppDefaultIcons {
   AppDefaultIcons._();
+  // Login
+  static const IconData login = Icons.login;
+  static const IconData username = Icons.face;
+  static const IconData password = Icons.password;
   // Navigations
   static const IconData splashScreen = Icons.scale_sharp;
   static const IconData onBoarding = Icons.web;
@@ -46,8 +53,8 @@ class AppDefaultIcons {
   static const IconData fromBuilderExtra = Icons.post_add;
   static const IconData fromBuilderValidation = Icons.rule;
   static const IconData profile = Icons.face;
+  static const IconData email = Icons.email;
   static const IconData settings = Icons.settings;
-  static const IconData login = Icons.login;
   static const IconData logout = Icons.logout;
   static const IconData error = Icons.error;
   // Widgets
@@ -57,6 +64,8 @@ class AppDefaultIcons {
   static const IconData autoTheme = Icons.brightness_auto;
   static const IconData lightTheme = Icons.light_mode;
   static const IconData darkTheme = Icons.dark_mode;
+  // Actions
+  static const IconData edit = Icons.edit;
 }
 
 class AppThemes {

@@ -13,34 +13,10 @@ class FormBuilderValidationScreen extends StatelessWidget {
   final GlobalKey<FormBuilderState> _formKey = GlobalKey<FormBuilderState>();
   final String _prefixFromLabel =
       'screens.formBuilder.children.validation.form';
-  final List<String> _langList = [
-    'Dart',
-    'Kotlin',
-    'Java',
-    'Swift',
-    'Objective-C',
-    'Other'
-  ];
-  final List<String> _databaseList = [
-    'Mongo DB',
-    'MySQL',
-    'Firebase',
-    'Appwrite',
-    'Other'
-  ];
-  final List<String> _colorsList = ['Red', 'Blue', 'Green', 'Other'];
-  final List<String> _filterChipList = [
-    'Apple',
-    'Samsung',
-    'Google',
-    'LG',
-    'Sony',
-    'Other'
-  ];
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
+    // final ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBarWidget(title: SCREENS.formBuilderValidation.toTitle),
       drawer:
@@ -56,44 +32,51 @@ class FormBuilderValidationScreen extends StatelessWidget {
                   children: [
                     FormBuilderTextField(
                       name: 'name',
+                      decoration: InputDecoration(
+                        labelText: context.tr('$_prefixFromLabel.name'),
+                      ),
                       validator: FormBuilderValidators.compose([
                         FormBuilderValidators.minLength(4),
                         FormBuilderValidators.required(),
                       ]),
-                      decoration: InputDecoration(
-                          labelText: context.tr('$_prefixFromLabel.name')),
                     ),
                     const SizedBox(height: AppStyleDefaultProperties.h),
                     FormBuilderTextField(
                       name: 'phone_number',
-                      validator: FormBuilderValidators.required(),
                       decoration: InputDecoration(
-                          labelText:
-                              context.tr('$_prefixFromLabel.phoneNumber')),
+                        labelText: context.tr('$_prefixFromLabel.phoneNumber'),
+                      ),
+                      validator: FormBuilderValidators.required(),
                     ),
                     const SizedBox(height: AppStyleDefaultProperties.h),
                     FormBuilderTextField(
                       name: 'email',
+                      decoration: InputDecoration(
+                        labelText: context.tr('$_prefixFromLabel.email'),
+                      ),
                       validator: FormBuilderValidators.compose([
                         FormBuilderValidators.email(),
                         FormBuilderValidators.required(),
                       ]),
-                      decoration: InputDecoration(
-                          labelText: context.tr('$_prefixFromLabel.email')),
                     ),
                     const SizedBox(height: AppStyleDefaultProperties.h),
                     FormBuilderTextField(
                       name: 'password',
+                      decoration: InputDecoration(
+                        labelText: context.tr('$_prefixFromLabel.password'),
+                      ),
                       validator: FormBuilderValidators.compose([
                         FormBuilderValidators.minLength(6),
                         FormBuilderValidators.required(),
                       ]),
-                      decoration: InputDecoration(
-                          labelText: context.tr('$_prefixFromLabel.password')),
                     ),
                     const SizedBox(height: AppStyleDefaultProperties.h),
                     FormBuilderTextField(
                       name: 'confirmPassword',
+                      decoration: InputDecoration(
+                        labelText:
+                            context.tr('$_prefixFromLabel.confirmPassword'),
+                      ),
                       validator: FormBuilderValidators.compose([
                         FormBuilderValidators.minLength(6),
                         FormBuilderValidators.required(),
@@ -106,9 +89,6 @@ class FormBuilderValidationScreen extends StatelessWidget {
                           return null;
                         }
                       ]),
-                      decoration: InputDecoration(
-                          labelText:
-                              context.tr('$_prefixFromLabel.confirmPassword')),
                     ),
                     const SizedBox(height: AppStyleDefaultProperties.h),
                   ],

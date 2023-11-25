@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_template/services/my_profile_service.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -28,6 +29,7 @@ class _AppScreenState extends State<AppScreen> {
   late RouteService routeService;
   late AuthService authService;
   late StreamSubscription<bool> authSubscription;
+  late MyProfileService myProfileService;
 
   @override
   void initState() {
@@ -36,6 +38,7 @@ class _AppScreenState extends State<AppScreen> {
     routeService = RouteService();
     authService = AuthService();
     authSubscription = authService.onAuthStateChange.listen(onAuthStateChange);
+    myProfileService = MyProfileService();
     super.initState();
   }
 
@@ -58,6 +61,8 @@ class _AppScreenState extends State<AppScreen> {
         ChangeNotifierProvider<RouteService>(create: (_) => routeService),
         Provider<AppRouter>(create: (_) => AppRouter(appService)),
         Provider<AuthService>(create: (_) => authService),
+        ChangeNotifierProvider<MyProfileService>(
+            create: (_) => myProfileService),
       ],
       child: Builder(
         builder: (context) {

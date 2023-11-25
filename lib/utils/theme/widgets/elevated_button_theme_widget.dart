@@ -7,14 +7,18 @@ class ElevatedThemeWidget {
     ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0.0,
-        padding: const EdgeInsets.all(AppStyleDefaultProperties.p),
+        textStyle: const TextStyle(height: 1.2),
+        padding: const EdgeInsets.all(
+          AppStyleDefaultProperties.bp,
+        ),
         shadowColor: Colors.transparent,
       ),
     ),
     ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0.0,
-        padding: const EdgeInsets.all(AppStyleDefaultProperties.p),
+        textStyle: const TextStyle(height: 1.2),
+        padding: const EdgeInsets.all(AppStyleDefaultProperties.bp),
         shadowColor: Colors.transparent,
       ),
     ),
