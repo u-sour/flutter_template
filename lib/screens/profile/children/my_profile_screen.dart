@@ -4,7 +4,6 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_template/services/my_profile_service.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:provider/provider.dart';
-
 import '../../../router/route_utils.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/responsive/responsive_layout.dart';
@@ -24,9 +23,13 @@ class MyProfileScreen extends StatelessWidget {
       drawer:
           !ResponsiveLayout.isDesktop(context) ? const DrawerWidget() : null,
       body: CustomScrollView(
+        physics: ResponsiveLayout.isDesktop(context)
+            ? const NeverScrollableScrollPhysics()
+            : null,
         slivers: [
           SliverAppBar(
             title: Text(context.tr(SCREENS.myProfile.toTitle)),
+            pinned: true,
             actions: [
               Container(
                 width: 120.0,
@@ -36,37 +39,40 @@ class MyProfileScreen extends StatelessWidget {
               )
             ],
             expandedHeight: 400.0,
-            flexibleSpace: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ClipRRect(
-                  borderRadius:
-                      BorderRadius.circular(AppStyleDefaultProperties.r),
-                  child: SizedBox(
-                    width: 100,
-                    height: 100,
-                    child: Image.network(
-                      'https://images.unsplash.com/photo-1699990250573-98cd46c2c864?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                      fit: BoxFit.cover,
+            flexibleSpace: FlexibleSpaceBar(
+              stretchModes: const [StretchMode.zoomBackground],
+              background: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ClipRRect(
+                    borderRadius:
+                        BorderRadius.circular(AppStyleDefaultProperties.r),
+                    child: SizedBox(
+                      width: 100,
+                      height: 100,
+                      child: Image.network(
+                        'https://images.unsplash.com/photo-1699990250573-98cd46c2c864?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: AppStyleDefaultProperties.h),
-                Text('Sour.Dev',
-                    style: theme.textTheme.titleLarge!
-                        .copyWith(color: theme.canvasColor)),
-                Text('yousour.dev@gmail.com',
-                    style: theme.textTheme.titleLarge!
-                        .copyWith(color: theme.canvasColor))
-              ],
+                  const SizedBox(height: AppStyleDefaultProperties.h),
+                  Text('Sour.Dev',
+                      style: theme.textTheme.titleLarge!
+                          .copyWith(color: theme.canvasColor)),
+                  Text('yousour.dev@gmail.com',
+                      style: theme.textTheme.titleLarge!
+                          .copyWith(color: theme.canvasColor))
+                ],
+              ),
             ),
           ),
-          SliverToBoxAdapter(
+          SliverFillRemaining(
             child: Consumer<MyProfileService>(
               builder: (context, state, child) => FormBuilder(
                 key: _formKey,
                 enabled: state.isFromEnabled,
-                child: Padding(
+                child: SingleChildScrollView(
                   padding: const EdgeInsets.all(AppStyleDefaultProperties.p),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

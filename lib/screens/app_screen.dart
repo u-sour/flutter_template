@@ -1,13 +1,14 @@
 import 'dart:async';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/services/my_profile_service.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../router/app_router.dart';
 import '../services/app_service.dart';
 import '../services/auth_service.dart';
+import '../services/login_form_service.dart';
+import '../services/my_profile_service.dart';
 import '../services/route_service.dart';
 import '../services/theme_service.dart';
 import '../utils/theme/theme.dart';
@@ -30,7 +31,7 @@ class _AppScreenState extends State<AppScreen> {
   late AuthService authService;
   late StreamSubscription<bool> authSubscription;
   late MyProfileService myProfileService;
-
+  late LoginFormService loginFormService;
   @override
   void initState() {
     appService = AppService(widget.sharedPreferences);
@@ -39,6 +40,7 @@ class _AppScreenState extends State<AppScreen> {
     authService = AuthService();
     authSubscription = authService.onAuthStateChange.listen(onAuthStateChange);
     myProfileService = MyProfileService();
+    loginFormService = LoginFormService();
     super.initState();
   }
 
@@ -63,6 +65,8 @@ class _AppScreenState extends State<AppScreen> {
         Provider<AuthService>(create: (_) => authService),
         ChangeNotifierProvider<MyProfileService>(
             create: (_) => myProfileService),
+        ChangeNotifierProvider<LoginFormService>(
+            create: (_) => loginFormService),
       ],
       child: Builder(
         builder: (context) {

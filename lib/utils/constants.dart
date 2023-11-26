@@ -44,6 +44,8 @@ class AppDefaultIcons {
   static const IconData login = Icons.login;
   static const IconData username = Icons.face;
   static const IconData password = Icons.password;
+  static const IconData showPassword = Icons.visibility;
+  static const IconData hidePassword = Icons.visibility_off;
   // Navigations
   static const IconData splashScreen = Icons.scale_sharp;
   static const IconData onBoarding = Icons.web;
