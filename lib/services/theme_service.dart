@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class ThemeService extends ChangeNotifier {
   ThemeMode _themeMode = ThemeMode.system;
 
-  //getter
+  // getter
   ThemeMode get themeMode => _themeMode;
 
-  //setter
+  // setter
   set themeMode(ThemeMode value) {
     _themeMode = value;
     notifyListeners();
   }
 
-  //methods
+  // methods
   void switchTheme(ThemeMode value) => themeMode = value;
 }

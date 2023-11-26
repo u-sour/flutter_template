@@ -1,12 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:flutter_template/services/auth_service.dart';
-import 'package:flutter_template/utils/constants.dart';
-
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:provider/provider.dart';
-
+import '../../services/auth_service.dart';
+import '../../services/login_form_service.dart';
+import '../../utils/constants.dart';
 import '../../utils/responsive/responsive_layout.dart';
 
 class LoginFormWidget extends StatelessWidget {
@@ -27,12 +27,15 @@ class LoginFormWidget extends StatelessWidget {
           child: FormBuilder(
             key: _formKey,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  context.tr(_fromTitle),
-                  style: theme.textTheme.headlineLarge!
-                      .copyWith(fontWeight: FontWeight.bold),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    context.tr(_fromTitle),
+                    style: theme.textTheme.headlineLarge!
+                        .copyWith(fontWeight: FontWeight.bold),
+                  ),
                 ),
                 const SizedBox(height: AppStyleDefaultProperties.h),
                 // FormBuilderTextField(
@@ -68,33 +71,86 @@ class LoginFormWidget extends StatelessWidget {
                       [FormBuilderValidators.required()]),
                 ),
                 const SizedBox(height: AppStyleDefaultProperties.h),
-                FormBuilderTextField(
-                  name: 'password',
-                  obscureText: true,
-                  decoration: ResponsiveLayout.isDesktop(context)
-                      ? InputDecoration(
-                          prefixIcon: const Icon(AppDefaultIcons.password),
-                          labelText: context.tr('$_prefixFromLabel.password'))
-                      : InputDecoration(
-                          prefixIcon: const Icon(AppDefaultIcons.password),
-                          hintText: context.tr('$_prefixFromLabel.password'),
-                          filled: true,
-                          border: const OutlineInputBorder(
-                              borderSide: BorderSide.none)),
-                  validator: FormBuilderValidators.required(),
+                Consumer<LoginFormService>(
+                  builder: (context, state, child) => FormBuilderTextField(
+                    name: 'password',
+                    obscureText: state.showPassword,
+                    decoration: ResponsiveLayout.isDesktop(context)
+                        ? InputDecoration(
+                            prefixIcon: const Icon(AppDefaultIcons.password),
+                            labelText: context.tr('$_prefixFromLabel.password'),
+                            suffixIcon: IconButton(
+                              onPressed: () =>
+                                  state.switchShowPassword(!state.showPassword),
+                              splashRadius: 16.0,
+                              icon: Icon(state.showPassword
+                                  ? AppDefaultIcons.hidePassword
+                                  : AppDefaultIcons.showPassword),
+                            ),
+                          )
+                        : InputDecoration(
+                            prefixIcon: const Icon(AppDefaultIcons.password),
+                            hintText: context.tr('$_prefixFromLabel.password'),
+                            filled: true,
+                            border: const OutlineInputBorder(
+                                borderSide: BorderSide.none),
+                            suffixIcon: IconButton(
+                              onPressed: () =>
+                                  state.switchShowPassword(!state.showPassword),
+                              splashRadius: 16.0,
+                              icon: Icon(state.showPassword
+                                  ? AppDefaultIcons.hidePassword
+                                  : AppDefaultIcons.showPassword),
+                            ),
+                          ),
+                    validator: FormBuilderValidators.required(),
+                  ),
                 ),
                 const SizedBox(height: AppStyleDefaultProperties.h),
                 Row(
                   children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        if (_formKey.currentState!.saveAndValidate()) {
-                          context.read<AuthService>().login();
-                        }
-                      },
-                      child: Text(context.tr('$_prefixFromLabel.submit')),
+                    Expanded(
+                      child: FormBuilderCheckbox(
+                        name: 'rememberMe',
+                        title: Text(context.tr('$_prefixFromLabel.rememberMe')),
+                      ),
+                    ),
+                    RichText(
+                        text: TextSpan(
+                      text: context.tr('$_prefixFromLabel.forgotPassword'),
+                      recognizer: TapGestureRecognizer()..onTap = () {},
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ))
+                  ],
+                ),
+                const SizedBox(height: AppStyleDefaultProperties.h),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.saveAndValidate()) {
+                            context.read<AuthService>().login();
+                          }
+                        },
+                        child: Text(context.tr('$_prefixFromLabel.submit')),
+                      ),
                     )
                   ],
+                ),
+                const SizedBox(height: AppStyleDefaultProperties.h),
+                RichText(
+                  text: TextSpan(
+                    text: context.tr('$_prefixFromLabel.noAccount'),
+                    children: [
+                      const WidgetSpan(child: SizedBox(width: 5.0)),
+                      TextSpan(
+                        text: context.tr('$_prefixFromLabel.createAccount'),
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                        recognizer: TapGestureRecognizer()..onTap = () {},
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),

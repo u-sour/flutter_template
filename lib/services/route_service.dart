@@ -3,15 +3,15 @@ import 'package:flutter/foundation.dart';
 class RouteService extends ChangeNotifier {
   int _routeIndexState = 0;
 
-  //getter
+  // getter
   int get routeIndexState => _routeIndexState;
 
-  //setter
+  // setter
   set routeIndexState(int state) {
     _routeIndexState = state;
     notifyListeners();
   }
 
-  //method
+  // method
   void changeRouteIndexState(int index) => routeIndexState = index;
 }
