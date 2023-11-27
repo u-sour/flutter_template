@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../utils/responsive/responsive_layout.dart';
 import '../widgets/app_bar_widget.dart';
@@ -15,7 +16,7 @@ class DashboardScreen extends StatelessWidget {
           !ResponsiveLayout.isDesktop(context) ? const DrawerWidget() : null,
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text('dashboard'.toUpperCase()),
+          Text(context.tr(SCREENS.dashboard.toTitle)),
         ]),
       ),
     );

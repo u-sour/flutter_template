@@ -18,7 +18,17 @@
                     "forgotPassword":"Forgot Password?",
                     "submit":"LOG IN",
                     "noAccount":"Don't have an account?",
-                    "createAccount":"Create an account"
+                    "createAccount":"Create an account",
+                    "alert":{
+                        "success":{
+                        "title":"Success",
+                        "message":"Hey, welcome back! let's start today."
+                        },
+                        "failure":{
+                        "title":"Failure",
+                        "message":"Failed to login"
+                        }
+                    }
                 }
             }
         },
@@ -94,5 +104,23 @@
         "logout":{
             "title":"LOG OUT"
         }  
+    },
+    "alert":{
+        "success":{
+            "title":"Success",
+            "message":"success"
+        },
+        "failure":{
+            "title":"Failure",
+            "message":"failure"
+        },
+        "warning":{
+            "title":"Warning",
+            "message":"warning"
+        },
+        "info":{
+            "title":"Infomation",
+            "message":"infomation"
+        }
     }
 }

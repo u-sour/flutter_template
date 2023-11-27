@@ -16,7 +16,59 @@ class AppThemeColors {
     900: Color.fromRGBO(33, 37, 41, 1)
   });
 
-  static const scaffoldBgColor = Color(0xFFe9ecef);
+  static const scaffoldBgColor = Color(0xFFf8f9fa);
+
+  static const MaterialColor success = MaterialColor(0xFF2a9d8f, {
+    50: Color.fromRGBO(42, 157, 143, .1),
+    100: Color.fromRGBO(42, 157, 143, .2),
+    200: Color.fromRGBO(42, 157, 143, .3),
+    300: Color.fromRGBO(42, 157, 143, .4),
+    400: Color.fromRGBO(42, 157, 143, .5),
+    500: Color.fromRGBO(42, 157, 143, .6),
+    600: Color.fromRGBO(42, 157, 143, .7),
+    700: Color.fromRGBO(42, 157, 143, .8),
+    800: Color.fromRGBO(42, 157, 143, .9),
+    900: Color.fromRGBO(42, 157, 143, 1)
+  });
+
+  static const MaterialColor failure = MaterialColor(0xFFef476f, {
+    50: Color.fromRGBO(239, 71, 111, .1),
+    100: Color.fromRGBO(239, 71, 111, .2),
+    200: Color.fromRGBO(239, 71, 111, .3),
+    300: Color.fromRGBO(239, 71, 111, .4),
+    400: Color.fromRGBO(239, 71, 111, .5),
+    500: Color.fromRGBO(239, 71, 111, .6),
+    600: Color.fromRGBO(239, 71, 111, .7),
+    700: Color.fromRGBO(239, 71, 111, .8),
+    800: Color.fromRGBO(239, 71, 111, .9),
+    900: Color.fromRGBO(239, 71, 111, 1)
+  });
+
+  static const MaterialColor warning = MaterialColor(0xFFfca311, {
+    50: Color.fromRGBO(252, 163, 17, .1),
+    100: Color.fromRGBO(252, 163, 17, .2),
+    200: Color.fromRGBO(252, 163, 17, .3),
+    300: Color.fromRGBO(252, 163, 17, .4),
+    400: Color.fromRGBO(252, 163, 17, .5),
+    500: Color.fromRGBO(252, 163, 17, .6),
+    600: Color.fromRGBO(252, 163, 17, .7),
+    700: Color.fromRGBO(252, 163, 17, .8),
+    800: Color.fromRGBO(252, 163, 17, .9),
+    900: Color.fromRGBO(252, 163, 17, 1)
+  });
+
+  static const MaterialColor info = MaterialColor(0xFF5aa9e6, {
+    50: Color.fromRGBO(90, 169, 230, .1),
+    100: Color.fromRGBO(90, 169, 230, .2),
+    200: Color.fromRGBO(90, 169, 230, .3),
+    300: Color.fromRGBO(90, 169, 230, .4),
+    400: Color.fromRGBO(90, 169, 230, .5),
+    500: Color.fromRGBO(90, 169, 230, .6),
+    600: Color.fromRGBO(90, 169, 230, .7),
+    700: Color.fromRGBO(90, 169, 230, .8),
+    800: Color.fromRGBO(90, 169, 230, .9),
+    900: Color.fromRGBO(90, 169, 230, 1)
+  });
 }
 
 class AppStyleDefaultProperties {
