@@ -6,8 +6,10 @@ import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:provider/provider.dart';
 import '../../services/auth_service.dart';
 import '../../services/login_form_service.dart';
+import '../../utils/alert/alert.dart';
 import '../../utils/constants.dart';
 import '../../utils/responsive/responsive_layout.dart';
+import '../../utils/alert/awesome_snack_bar_utils.dart';
 
 class LoginFormWidget extends StatelessWidget {
   final double? formWidth;
@@ -108,8 +110,10 @@ class LoginFormWidget extends StatelessWidget {
                 ),
                 const SizedBox(height: AppStyleDefaultProperties.h),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(
+                    SizedBox(
+                      width: 155.0,
                       child: FormBuilderCheckbox(
                         name: 'rememberMe',
                         title: Text(context.tr('$_prefixFromLabel.rememberMe')),
@@ -128,10 +132,24 @@ class LoginFormWidget extends StatelessWidget {
                   children: [
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: () {
+                        onPressed: () async {
+                          late SnackBar snackBar;
                           if (_formKey.currentState!.saveAndValidate()) {
-                            context.read<AuthService>().login();
+                            await context.read<AuthService>().login();
+                            snackBar = Alert.awesomeSnackBar(
+                                message:
+                                    '$_prefixFromLabel.alert.success.message',
+                                type: AWESOMESNACKBARTYPE.success);
+                          } else {
+                            snackBar = Alert.awesomeSnackBar(
+                                message:
+                                    '$_prefixFromLabel.alert.failure.message',
+                                type: AWESOMESNACKBARTYPE.failure);
                           }
+                          if (!context.mounted) return;
+                          ScaffoldMessenger.of(context)
+                            ..hideCurrentSnackBar()
+                            ..showSnackBar(snackBar);
                         },
                         child: Text(context.tr('$_prefixFromLabel.submit')),
                       ),

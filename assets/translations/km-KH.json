@@ -18,7 +18,17 @@
                     "forgotPassword":"ភ្លេច​ពាក្យ​សម្ងាត់?",
                     "submit":"ចូល",
                     "noAccount":"មិនមានគណនីមែនទេ?",
-                    "createAccount":"បង្កើត​គណនី"
+                    "createAccount":"បង្កើត​គណនី",
+                    "alert":{
+                        "success":{
+                        "title":"ជោគជ័យ",
+                        "message":"ហេ, ស្វាគមន៍ការត្រឡប់មកវិញ! តោះចាប់ផ្តើមថ្ងៃនេះ។"
+                        },
+                        "failure":{
+                        "title":"បរាជ័យ",
+                        "message":"បរាជ័យក្នុងការចូល"
+                        }
+                    }
                 }
             }
         },
@@ -89,5 +99,23 @@
         "logout":{
             "title":"ចាកចេញ"
         }  
+    },
+    "alert":{
+        "success":{
+            "title":"ជោគជ័យ",
+            "message":"success"
+        },
+        "failure":{
+            "title":"បរាជ័យ",
+            "message":"error"
+        },
+        "warning":{
+            "title":"ព្រមាន",
+            "message":"warning"
+        },
+        "info":{
+            "title":"ពត៌មាន",
+            "message":"infomation"
+        }
     }
 }

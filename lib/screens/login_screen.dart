@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/utils/responsive/responsive_layout.dart';
-import 'package:flutter_template/widgets/login/login_brand_widget.dart';
-import 'package:flutter_template/widgets/login/login_form_widget.dart';
+import '../utils/responsive/responsive_layout.dart';
+import '../widgets/login/login_brand_widget.dart';
+import '../widgets/login/login_form_widget.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({Key? key}) : super(key: key);
