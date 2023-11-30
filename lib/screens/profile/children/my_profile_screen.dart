@@ -57,12 +57,9 @@ class MyProfileScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: AppStyleDefaultProperties.h),
-                  Text('Sour.Dev',
-                      style: theme.textTheme.titleLarge!
-                          .copyWith(color: theme.canvasColor)),
+                  Text('Sour.Dev', style: theme.textTheme.titleLarge!),
                   Text('yousour.dev@gmail.com',
-                      style: theme.textTheme.titleLarge!
-                          .copyWith(color: theme.canvasColor))
+                      style: theme.textTheme.titleLarge!)
                 ],
               ),
             ),
@@ -149,7 +146,7 @@ class MyProfileScreen extends StatelessWidget {
               ? Row(
                   children: [
                     Expanded(
-                      child: ElevatedButton(
+                      child: FilledButton(
                           onPressed: () {
                             _formKey.currentState!.reset();
                           },
@@ -158,7 +155,7 @@ class MyProfileScreen extends StatelessWidget {
                     ),
                     const SizedBox(width: AppStyleDefaultProperties.w),
                     Expanded(
-                      child: ElevatedButton(
+                      child: FilledButton(
                           onPressed: () {
                             if (_formKey.currentState!.saveAndValidate()) {}
                           },

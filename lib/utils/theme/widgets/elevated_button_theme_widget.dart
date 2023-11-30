@@ -6,7 +6,6 @@ class ElevatedThemeWidget {
   static final List<ElevatedButtonThemeData> _elevatedBtns = [
     ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        elevation: 0.0,
         textStyle: const TextStyle(height: 1.2),
         padding: const EdgeInsets.all(
           AppStyleDefaultProperties.bp,
@@ -16,7 +15,6 @@ class ElevatedThemeWidget {
     ),
     ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        elevation: 0.0,
         textStyle: const TextStyle(height: 1.2),
         padding: const EdgeInsets.all(AppStyleDefaultProperties.bp),
         shadowColor: Colors.transparent,

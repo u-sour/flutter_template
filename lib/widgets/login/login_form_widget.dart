@@ -67,6 +67,7 @@ class LoginFormWidget extends StatelessWidget {
                           prefixIcon: const Icon(AppDefaultIcons.username),
                           hintText: context.tr('$_prefixFromLabel.username'),
                           filled: true,
+                          fillColor: Colors.white24,
                           border: const OutlineInputBorder(
                               borderSide: BorderSide.none)),
                   validator: FormBuilderValidators.compose(
@@ -94,6 +95,7 @@ class LoginFormWidget extends StatelessWidget {
                             prefixIcon: const Icon(AppDefaultIcons.password),
                             hintText: context.tr('$_prefixFromLabel.password'),
                             filled: true,
+                            fillColor: Colors.white24,
                             border: const OutlineInputBorder(
                                 borderSide: BorderSide.none),
                             suffixIcon: IconButton(
@@ -123,7 +125,9 @@ class LoginFormWidget extends StatelessWidget {
                         text: TextSpan(
                       text: context.tr('$_prefixFromLabel.forgotPassword'),
                       recognizer: TapGestureRecognizer()..onTap = () {},
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: theme.colorScheme.primary),
                     ))
                   ],
                 ),
@@ -131,7 +135,7 @@ class LoginFormWidget extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: ElevatedButton(
+                      child: FilledButton(
                         onPressed: () async {
                           late SnackBar snackBar;
                           if (_formKey.currentState!.saveAndValidate()) {
@@ -160,11 +164,14 @@ class LoginFormWidget extends StatelessWidget {
                 RichText(
                   text: TextSpan(
                     text: context.tr('$_prefixFromLabel.noAccount'),
+                    style: TextStyle(color: theme.textTheme.bodySmall!.color),
                     children: [
                       const WidgetSpan(child: SizedBox(width: 5.0)),
                       TextSpan(
                         text: context.tr('$_prefixFromLabel.createAccount'),
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: theme.colorScheme.primary),
                         recognizer: TapGestureRecognizer()..onTap = () {},
                       ),
                     ],
