@@ -21,8 +21,7 @@ class ToggleSwitchThemeWidget extends StatelessWidget {
         // iconBuilder: iconBuilder,
         iconList: AppThemes.themes.map((theme) => Icon(theme.icon)).toList(),
         style: ToggleStyle(
-          backgroundColor: Colors.white30,
-          indicatorColor: theme.toggleButtonsTheme.selectedBorderColor,
+          indicatorColor: theme.colorScheme.surface,
           borderColor: Colors.transparent,
         ),
       ),

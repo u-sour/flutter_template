@@ -102,7 +102,7 @@ class FormBuilderValidationScreen extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: ElevatedButton(
+              child: FilledButton(
                   onPressed: () {
                     _formKey.currentState!.reset();
                   },
@@ -111,7 +111,7 @@ class FormBuilderValidationScreen extends StatelessWidget {
             ),
             const SizedBox(width: AppStyleDefaultProperties.w),
             Expanded(
-              child: ElevatedButton(
+              child: FilledButton(
                   onPressed: () {
                     if (_formKey.currentState!.saveAndValidate()) {}
                   },

@@ -5,13 +5,13 @@ class BottomNavBarThemeWidget {
   BottomNavBarThemeWidget._();
   static final List<BottomNavigationBarThemeData> _bottomNavBars = [
     BottomNavigationBarThemeData(
-      backgroundColor: AppThemeColors.primary[600],
+      backgroundColor: AppThemeColors.primary[700],
       selectedItemColor: AppThemeColors.primary,
       selectedLabelStyle: const TextStyle(color: Colors.white),
       unselectedLabelStyle: const TextStyle(color: Colors.white),
     ),
     BottomNavigationBarThemeData(
-      backgroundColor: AppThemeColors.primary[600],
+      backgroundColor: AppThemeColors.primary[700],
       selectedItemColor: AppThemeColors.primary,
       selectedLabelStyle: const TextStyle(color: Colors.white),
       unselectedLabelStyle: const TextStyle(color: Colors.white),
