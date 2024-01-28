@@ -7,7 +7,7 @@ This is a pre-designed and pre-built set of components, styles, and structures f
 - Example Screen Templates (Login, Dashboard, From Builder, Profile, Settings)
 - DeepLink Router with Go Router Package
 - Light & Dark Mode
-- Multi Lagauage (en,km)
+- Multi Lagauages (en,km)
 - Responsive (Mobile, Tablet, Desktop)
 
 ## Demo
