@@ -5,7 +5,7 @@ import '../widgets/login/login_brand_widget.dart';
 import '../widgets/login/login_form_widget.dart';
 
 class LogInScreen extends StatelessWidget {
-  const LogInScreen({Key? key}) : super(key: key);
+  const LogInScreen({super.key});
   final animateDuration = const Duration(seconds: 1);
   @override
   Widget build(BuildContext context) {

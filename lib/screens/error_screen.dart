@@ -6,9 +6,9 @@ import '../widgets/app_bar_widget.dart';
 class ErrorScreen extends StatelessWidget {
   final String? error;
   const ErrorScreen({
-    Key? key,
+    super.key,
     this.error,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
