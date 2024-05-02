@@ -5,7 +5,7 @@ import '../services/app_service.dart';
 import '../widgets/app_bar_widget.dart';
 
 class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({Key? key}) : super(key: key);
+  const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
