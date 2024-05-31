@@ -6,9 +6,9 @@ class FilledThemeWidget {
   static final List<FilledButtonThemeData> _filledBtns = [
     FilledButtonThemeData(
       style: ButtonStyle(
-        padding: MaterialStateProperty.all(
+        padding: WidgetStateProperty.all(
             const EdgeInsets.all(AppStyleDefaultProperties.bp)),
-        shape: MaterialStateProperty.all(
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppStyleDefaultProperties.r),
           ),
@@ -17,9 +17,9 @@ class FilledThemeWidget {
     ),
     FilledButtonThemeData(
       style: ButtonStyle(
-        padding: MaterialStateProperty.all(
+        padding: WidgetStateProperty.all(
             const EdgeInsets.all(AppStyleDefaultProperties.bp)),
-        shape: MaterialStateProperty.all(
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppStyleDefaultProperties.r),
           ),
